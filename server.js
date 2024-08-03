@@ -1,5 +1,6 @@
 const express = require('express');
 const cors = require('cors');
+require('dotenv').config();
 const bodyParser = require('body-parser');
 const pool = require('./db');
 const app = express();
@@ -45,6 +46,6 @@ process.on('SIGINT', () => {
         process.exit(0);
     });
 });
-app.listen(PORT, () => {
+app.listen(5000, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
